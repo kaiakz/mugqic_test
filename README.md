@@ -72,25 +72,33 @@ Please read the list of available projects hosted for this year. If you are inte
 
 ## Creating a new pipeline for long-read RNA-seq using StringTie2
 
-The majority of contemporary genomics and transcriptomics research is carried out using short-read technology such as the output of Illumina sequencers. However, newer long-read technologies such as PacBio and Oxford Nanopore (ONT) are becoming more prevalent due to the advantages they offer over short reads. The main advantage of long reads is that they span a much larger portion of the genome or transcriptome, making it easier to detect events such as structural variants or isoforms. As more researchers begin to take advantage of long reads, GenPipes needs to evolve and support long-read technology in its main pipelines. The objective of this project is to create a new RNA-seq pipeline (rnaseq_longreads), that supports long-read inputs. The new pipeline would be created based on the current versions of the RNA-seq pipeline, with the addition of the minimap2 aligner as well as StringTie2 and Ballgown for generating transcript counts. If time allows, in addition to implementing a long-read RNA-seq pipeline within the GenPipes framework, the student will help update the RNA-seq pipeline to also use StringTie2 as well as test both pipelines to ensure they are working properly. 
+The majority of contemporary genomics and transcriptomics research is carried out using short-read technology such as the output of Illumina sequencers. However, newer long-read technologies such as PacBio and Oxford Nanopore (ONT) are becoming more prevalent due to the advantages they offer over short reads. The main advantage of long reads is that they span a much larger portion of the genome or transcriptome, making it easier to detect events such as structural variants or isoforms. As more researchers begin to take advantage of long reads, GenPipes needs to evolve and support long-read technology in its main pipelines. 
+
+The objective of this project is to create a new RNA-seq pipeline (rnaseq_longreads), that supports long-read inputs. The new pipeline would be created based on the current versions of the RNA-seq pipeline, with the addition of the minimap2 aligner as well as StringTie2 and Ballgown for generating transcript counts. 
+
+If time allows, in addition to implementing a long-read RNA-seq pipeline within the GenPipes framework, the student will help update the RNA-seq pipeline to also use StringTie2 as well as test both pipelines to ensure they are working properly. 
 
 
 ### Developer profile
 
-Required skills: Python, R, bash, git
-Nice to have: Experience with genomics data, especially long-reads
+**Required skills:** Python, R, bash, git  
+**Nice to have:** Experience with genomics data, especially long-reads
+
 
 ### Selection tests
 
 1. Install the following software in your computing environment: 
-        a. [StringTie2](https://github.com/mpertea/stringtie2)  (run test suite to ensure it is working). 
-        b. The [Ballgown](http://bioconductor.org/packages/release/bioc/html/ballgown.html) R-Bioconductor library 
-                i. If required, install R and any additional dependencies.
-        c. [Tablemaker](https://github.com/leekgroup/tablemaker).   
+
+	a. [StringTie2](https://github.com/mpertea/stringtie2)  (run test suite to ensure it is working).   
+	b. The [Ballgown](http://bioconductor.org/packages/release/bioc/html/ballgown.html) R-Bioconductor library (If required, install R and any additional dependencies).     
+	c. [Tablemaker](https://github.com/leekgroup/tablemaker).  
+	 
         
 2. Download the following nanopore mouse RNA-seq datasets from [this recent study](https://www.nature.com/articles/s41598-019-51470-9): 
-        a. Brain C1: [genome BAM file](http://www.genoscope.cns.fr/externe/ONT_mouse_RNA/data/genome/RNA_nanopore.brain.C1R1_mapping_E94_minimap2_primary_no_read_less_than_80QC_genome_convert.sorted.bam)
-        b. Liver C1: [genome BAM file](http://www.genoscope.cns.fr/externe/ONT_mouse_RNA/data/genome/RNA_nanopore.liver.C1R1_mapping_E94_minimap2_primary_no_read_less_than_80QC_genome_convert.sorted.bam)
+
+   a. Brain C1: [genome BAM file](http://www.genoscope.cns.fr/externe/ONT_mouse_RNA/data/genome/RNA_nanopore.brain.C1R1_mapping_E94_minimap2_primary_no_read_less_than_80QC_genome_convert.sorted.bam)       
+   b. Liver C1: [genome BAM file](http://www.genoscope.cns.fr/externe/ONT_mouse_RNA/data/genome/RNA_nanopore.liver.C1R1_mapping_E94_minimap2_primary_no_read_less_than_80QC_genome_convert.sorted.bam)
+   
         
 3. Using StringTie2 long-read mode, generate a GTF file for each of these samples. 
 
@@ -101,15 +109,17 @@ Nice to have: Experience with genomics data, especially long-reads
 
 Save your work in an external repository and send us a link to it. The repository must contain: 
 
-    * A bash script with your StringTie2 and Tablemaker commands. 
-    * An R script with your Ballgown commands. 
-    * The first 1000 lines of both GTF files generated using StringTie2. 
-    * The first 1000 lines of the FPKM matrix produced by Ballgown, saved as a csv. 
-        * Hint: use the `texpr` function in Ballgown to obtain this matrix.
+* A bash script with your StringTie2 and Tablemaker commands. 
+* An R script with your Ballgown commands. 
+* The first 1000 lines of both GTF files generated using StringTie2. 
+* The first 1000 lines of the FPKM matrix produced by Ballgown, saved as a csv. 
+* Hint: use the `texpr` function in Ballgown to obtain this matrix.
 
 
 ### Mentors
 [Jose Hector Galvez](mailto:jose.hector.galvez@computationalgenomics.ca)
+
+
 
 -----------------------------
 
@@ -129,12 +139,62 @@ and
 
 ### Selection tests
 
-Complete the notebooks fst_allel-hints.ipynb and wright-fisher-hints.ipnb found in the "data_test" folder by filling in the blanks and ellipses (…), run the code, and answer the interpretation questions.
+Complete the notebooks fst\_allel-hints.ipynb and wright-fisher-hints.ipnb found in the "data_test" folder by filling in the blanks and ellipses (…), run the code, and answer the interpretation questions.
 
 ### Mentors
 [Dr. Simon Gravel](mailto:simon.gravel@mcgill.ca)
 
 -----------------------------
 
+
+## Automatic update of the C3G software stack catalog
+
+GenPipes is one of the main bioinformatics tools/services offered by the Canadian Center for Computational genomics (C3G) (http://www.computationalgenomics.ca). It consists of bioinformatics pipelines designed for Genomics sequencing analysis. In order to perform those analysis, the C3G developers maintain a software stack which continuously grows and updates.
+A catalog of the softwares currently installed was built in JSON format and is available on the C3G website (http://www.computationalgenomics.ca/cvmfs-modules/). This project consists of implementing a system to automate the update of the JSON catalog as new versions and softwares are installed. This system will have to be fully integrated in the current installation workflow of the C3G developers (https://bitbucket.org/mugqic/genpipes/src/master/#markdown-header-install-a-new-module) and be able to parse Tcl module files (https://modules.readthedocs.io/en/stable/modulefile.html) which would represent the source of the catalog.
+
+### Developer profile
+
+**Required skills:** JSON, Git, Python, Bash  
+**Nice to have:** Tcl modules experience, software versioning
+
+### Selection tests
+
+Coming soon
+
+### Mentors
+[Pierre-Olivier Quirion](mailto:po.quirion@mcgill.ca)  
+[Edouard Henrion](mailto:edouard.henrion@computationalgenomics.ca) 
+
+-----------------------------
+
+## Ingesting the Canadian Common CV
+
+The Canadian Common CV (CCV) is a tool that allows Canadian researchers to input their resume in a standardized format. It is used by multiple organizations such as granting agencies, federal, provincial and academic instituions. The tool enable users to output results in an XML document, that can be used in external applications. More information on the CCV is available here:
+
+https://ccv-cvc.ca/indexresearcher-eng.frm
+
+This project involves building an application that can ingest, store and query data from the CCV. It includes the following components:
+
+1- A standalone library to parse CCV documents and organize them in a data structure.
+
+2- A tool using the above library on the command line to ingest a CCV, and store its components in a relational database.
+
+3- An API to query available CCVs based on multiple criteria.
+
+4- A web application to output results.
+
+The libraries will be implemented in Python, and data should be collected and organized in a SQLite database. The web application back-end should be implemented either using Flask or Django, and the front-end should be written in React.
+
+### Selection tests
+
+Coming soon
+
+### Mentors
+
+[Romain Gregoire](mailto:romain.gregoire@computationalgenomics.ca)   
+[David Bujold](mailto:david.bujold@computationalgenomics.ca)   
+
+
+-----------------------------
 
 
