@@ -159,6 +159,27 @@ A catalog of the softwares currently installed was built in JSON format and is a
 
 ### Selection tests
 
+coming soon
+
+### Mentors
+[Edouard Henrion](mailto:edouard.henrion@computationalgenomics.ca)   
+[Pierre-Olivier Quirion](mailto:po.quirion@mcgill.ca)  
+
+-----------------------------
+
+
+
+## DevOps for the McGill Genome Center Scientific Workflow System
+
+We have a Powerful system used to do Genomics sequencing called Genpipes. It is optimized to run on  the High Performance Computing (HPC) system of Compute Canada (https://docs.computecanada.ca/wiki/Systems_overview)
+We now want to push things further by allowing GenPipes to deploy into the cloud.
+In order to do this the student will adapt Terraform recipes so our system can be deployed on Openstack, on GCP, AWS, Azur, etc.
+
+**Some Key word for that project:**  
+ Terraform, Yml, Git, Python, Bash, CloudInit, Puppet, Networking
+
+### Selection tests
+
 1- Install Singularity on a Linux computer. You will need to be sudoer to do that: https://github.com/sylabs/singularity/blob/master/INSTALL.md
 
 2- Clone our pipeline system from bitbucket (https://bitbucket.org/mugqic/genpipes) in  a work directory $WORKDIR.  
@@ -175,11 +196,13 @@ $WORKDIR/genpipes/pipelines/chipseq/chipseq.py  --wrap -c $WORKDIR/genpipes/pipe
 
 Good luck!
 
+
 ### Mentors
 [Pierre-Olivier Quirion](mailto:po.quirion@mcgill.ca)  
 [Edouard Henrion](mailto:edouard.henrion@computationalgenomics.ca) 
 
 -----------------------------
+
 
 ## Ingesting the Canadian Common CV
 
