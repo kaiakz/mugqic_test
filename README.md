@@ -159,7 +159,21 @@ A catalog of the softwares currently installed was built in JSON format and is a
 
 ### Selection tests
 
-Coming soon
+1- Install Singularity on a Linux computer. You will need to be sudoer to do that: https://github.com/sylabs/singularity/blob/master/INSTALL.md
+
+2- Clone our pipeline system from bitbucket (https://bitbucket.org/mugqic/genpipes) in  a work directory $WORKDIR.  
+
+3- Checkout the dev branch of our repo, note the hash value of the commit, you will need to send us that information. 
+
+4- Get the Genpipes in a container wrapper utilities and set it up: https://bitbucket.org/mugqic/genpipes/src/dev/#markdown-header-genpipes-container & https://github.com/c3g/genpipes_in_a_container
+Now you technically have all that is needed to run our pipeline in "batch" mode
+
+5- Create the instruction for the Chipseq Pipeline with this extremely long command:
+$WORKDIR/genpipes/pipelines/chipseq/chipseq.py  --wrap -c $WORKDIR/genpipes/pipelines/chipseq/chipseq.base.ini  $WORKDIR/genpipes/pipelines/chipseq/cit.ini $WORKDIR/genpipes/pipelines/chipseq/chipseq.batch.ini -r /cvmfs/soft.mugqic/CentOS6/testdata/chipseq/readset.chipseq.txt -d /cvmfs/soft.mugqic/CentOS6/testdata/chipseq/design.chipseq.txt -j batch --no-json > chipseq_commands.sh
+
+6- Send us your chipseq_commands.sh file and the hash of the genpipes commit you used to create it.
+
+Good luck!
 
 ### Mentors
 [Pierre-Olivier Quirion](mailto:po.quirion@mcgill.ca)  
