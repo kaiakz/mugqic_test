@@ -70,11 +70,11 @@ Please read the list of available projects hosted for this year. If you are inte
 # Proposed Projects 
 
 
-## Creating a new pipeline for long-read RNA-seq using StringTie2
+## Creating a new pipeline for long-read RNA-seq using StringTie v2
 
 The majority of contemporary genomics and transcriptomics research is carried out using short-read technology such as the output of Illumina sequencers. However, newer long-read technologies such as PacBio and Oxford Nanopore (ONT) are becoming more prevalent due to the advantages they offer over short reads. The main advantage of long reads is that they span a much larger portion of the genome or transcriptome, making it easier to detect events such as structural variants or isoforms. As more researchers begin to take advantage of long reads, GenPipes needs to evolve and support long-read technology in its main pipelines. 
 
-The objective of this project is to create a new RNA-seq pipeline (rnaseq_longreads), that supports long-read inputs. The new pipeline would be created based on the current versions of the RNA-seq pipeline, with the addition of the minimap2 aligner as well as StringTie2 and Ballgown for generating transcript counts. 
+The objective of this project is to create a new RNA-seq pipeline (rnaseq_longreads), that supports long-read inputs. The new pipeline would be created based on the current versions of the RNA-seq pipeline, with the addition of the minimap2 aligner as well as StringTie v2 and Ballgown for generating transcript counts. 
 
 If time allows, in addition to implementing a long-read RNA-seq pipeline within the GenPipes framework, the student will help update the RNA-seq pipeline to also use StringTie2 as well as test both pipelines to ensure they are working properly. 
 
@@ -89,7 +89,7 @@ If time allows, in addition to implementing a long-read RNA-seq pipeline within 
 
 1. Install the following software in your computing environment: 
 
-	a. [StringTie2](https://github.com/mpertea/stringtie2)  (run test suite to ensure it is working).   
+	a. [StringTie v2](https://github.com/gpertea/stringtie/tree/v2.1.1)  (run test suite to ensure it is working).   
 	b. The [Ballgown](http://bioconductor.org/packages/release/bioc/html/ballgown.html) R-Bioconductor library (If required, install R and any additional dependencies).     
 	c. [Tablemaker](https://github.com/leekgroup/tablemaker).  
 	 
@@ -100,7 +100,7 @@ If time allows, in addition to implementing a long-read RNA-seq pipeline within 
    b. Liver C1: [genome BAM file](http://www.genoscope.cns.fr/externe/ONT_mouse_RNA/data/genome/RNA_nanopore.liver.C1R1_mapping_E94_minimap2_primary_no_read_less_than_80QC_genome_convert.sorted.bam)
    
         
-3. Using StringTie2 long-read mode, generate a GTF file for each of these samples. 
+3. Using StringTie v2 long-read mode, generate a GTF file for each of these samples. 
 
 4. Run Tablemaker on the two samples above (use the BAM and GTF files used above). 
 
@@ -109,7 +109,7 @@ If time allows, in addition to implementing a long-read RNA-seq pipeline within 
 
 Save your work in an external repository and send us a link to it. The repository must contain: 
 
-* A bash script with your StringTie2 and Tablemaker commands. 
+* A bash script with your StringTie v2 and Tablemaker commands. 
 * An R script with your Ballgown commands. 
 * The first 1000 lines of both GTF files generated using StringTie2. 
 * The first 1000 lines of the FPKM matrix produced by Ballgown, saved as a csv. 
