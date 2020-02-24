@@ -96,8 +96,8 @@ If time allows, in addition to implementing a long-read RNA-seq pipeline within 
         
 2. Download the following nanopore mouse RNA-seq datasets from [this recent study](https://www.nature.com/articles/s41598-019-51470-9): 
 
-   a. Brain C1: [genome BAM file](http://www.genoscope.cns.fr/externe/ONT_mouse_RNA/data/genome/RNA_nanopore.brain.C1R1_mapping_E94_minimap2_primary_no_read_less_than_80QC_genome_convert.sorted.bam)       
-   b. Liver C1: [genome BAM file](http://www.genoscope.cns.fr/externe/ONT_mouse_RNA/data/genome/RNA_nanopore.liver.C1R1_mapping_E94_minimap2_primary_no_read_less_than_80QC_genome_convert.sorted.bam)
+   a. Brain C1: [BAM file](http://www.genoscope.cns.fr/externe/ONT_mouse_RNA/data/transcriptome/RNA_nanopore.brain.C1R1_mapping_E94_minimap2_primary_no_read_less_than_80QC.bam)       
+   b. Liver C1: [BAM file](http://www.genoscope.cns.fr/externe/ONT_mouse_RNA/data/transcriptome/RNA_nanopore.liver.C1R1_mapping_E94_minimap2_primary_no_read_less_than_80QC.bam)
    
         
 3. Using StringTie v2 long-read mode, generate a GTF file for each of these samples. 
