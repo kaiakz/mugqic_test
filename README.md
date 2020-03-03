@@ -164,8 +164,11 @@ This project consists of implementing a system to automate the update of the JSO
 
 The content of the `data_test/SoftStackCatalog` folder mimics the file structure of the C3G software stack, where the `modulefiles/mugqic` directory contains all the Tcl module files used by the GenPipes anaylsis pilelines to call all their needed softwares.
 And the `software` directory would actually contain all the tools provided by the software stack.
+
 Here the `modulefiles/mugqic` folder only contains a handful of the C3G module files. These modules refer to softwares installed in the `software` directory.
+
 The `software` folder contains all the directory structures of the softwares specified in the `modulefiles/mugqic` module files (it does not contain the software themselves as these are not necessary for the test).
+
 
 1- Parse the whole file structure of the [`data_test/SoftStackCatalog/modulefiles/mugqic/`](https://bitbucket.org/mugqic/gsoc_2020/src/SoftStackCatalog/data_test/SoftStackCatalog/modulefiles/mugqic/) folder and create a JSON file that would represent all the provided softwares and their available versions.
 
@@ -174,6 +177,7 @@ The `software` folder contains all the directory structures of the softwares spe
 
 Optionaly, you could have look at how we do install software on the C3G software stack by looking at some of our installaton scripts [here](https://bitbucket.org/mugqic/genpipes/src/master/resources/modules/).
 These scripts allow us to install softwares as well as create the associated module files for the desired versions.
+
 
 ### Mentors
 [Edouard Henrion](mailto:edouard.henrion@computationalgenomics.ca)   
