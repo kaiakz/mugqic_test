@@ -149,8 +149,11 @@ Complete the notebooks fst\_allel-hints.ipynb and wright-fisher-hints.ipnb found
 
 ## Automatic update of the C3G software stack catalog
 
-GenPipes is one of the main bioinformatics tools/services offered by the Canadian Center for Computational genomics (C3G) (http://www.computationalgenomics.ca). It consists of bioinformatics pipelines designed for Genomics sequencing analysis. In order to perform those analysis, the C3G developers maintain a software stack which continuously grows and updates.
-A catalog of the softwares currently installed was built in JSON format and is available on the C3G website (http://www.computationalgenomics.ca/cvmfs-modules/). This project consists of implementing a system to automate the update of the JSON catalog as new versions and softwares are installed. This system will have to be fully integrated in the current installation workflow of the C3G developers (https://bitbucket.org/mugqic/genpipes/src/master/#markdown-header-install-a-new-module) and be able to parse Tcl module files (https://modules.readthedocs.io/en/stable/modulefile.html) which would represent the source of the catalog.
+GenPipes is one of the main bioinformatics tools/services offered by the [Canadian Center for Computational genomics (C3G)](http://www.computationalgenomics.ca). It consists of bioinformatics pipelines designed for Genomics sequencing analysis.
+In order to perform those analysis, the C3G developers maintain a software stack which continuously grows and updates.
+A catalog of the installed softwares was built in JSON format and is available on the C3G website (http://www.computationalgenomics.ca/cvmfs-modules/).
+
+This project consists of implementing a system to automate the update of the JSON catalog as new versions and softwares are installed. This system will have to be fully integrated in the current installation workflow of the C3G developers (https://bitbucket.org/mugqic/genpipes/src/master/#markdown-header-install-a-new-module) and eventually be able to parse Tcl module files (https://modules.readthedocs.io/en/stable/modulefile.html) which would represent the source of the catalog.
 
 ### Developer profile
 
@@ -159,7 +162,22 @@ A catalog of the softwares currently installed was built in JSON format and is a
 
 ### Selection tests
 
-coming soon
+The content of the `data_test/SoftStackCatalog` folder mimics the file structure of the C3G software stack, where the `modulefiles/mugqic` directory contains all the Tcl module files used by the GenPipes anaylsis pilelines to call all their required software.
+The `software` directory would actually contain all the tools provided by the software stack.
+
+Here the `modulefiles/mugqic` folder only contains a handful of the C3G module files. These modules refer to softwares installed in the `software` directory.
+
+The `software` folder contains all the directory structures of the software specified in the `modulefiles/mugqic` module files (it does not contain the software itself as it is not necessary for the test).
+
+
+1- Parse the whole file structure of the [`data_test/SoftStackCatalog/modulefiles/mugqic/`](https://bitbucket.org/mugqic/gsoc_2020/src/SoftStackCatalog/data_test/SoftStackCatalog/modulefiles/mugqic/) folder and create a JSON file that would represent all the provided software and available versions.
+
+2- Identify the lacking information for a comprehensive and meaningful software catalog : besides the name and version of the software, what relevant information should be provided by the catalog (software description, website, etc...).
+   Propose ways to find, gather and store this missing information.
+
+Optionally, you could have a look at how we install software on the C3G software stack by looking at some of our installaton scripts [here](https://bitbucket.org/mugqic/genpipes/src/master/resources/modules/).
+These scripts allow us to install software, as well as create the associated module files for the desired versions.
+
 
 ### Mentors
 [Edouard Henrion](mailto:edouard.henrion@computationalgenomics.ca)   
