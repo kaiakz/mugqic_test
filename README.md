@@ -139,7 +139,10 @@ and
 
 ### Selection tests
 
+First read and run the Hardy-Weiberg-allel.ipynb notebook in the data_test directory. This will provide instructions to download a genetic data file.  
 Complete the notebooks fst\_allel-hints.ipynb and wright-fisher-hints.ipnb found in the "data_test" folder by filling in the blanks and ellipses (…), run the code, and answer the interpretation questions.
+
+In your application, submit a cv, your completed notebooks (in ipynb or pdf format), and specific interests that you may have. There are many needs on this project from user interface, algorithms, implementations of statistical inference tools, and implementations  of more realistic biological models.  
 
 ### Mentors
 [Dr. Simon Gravel](mailto:simon.gravel@mcgill.ca)
