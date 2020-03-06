@@ -181,6 +181,9 @@ The `software` folder contains all the directory structures of the software spec
 Optionally, you could have a look at how we install software on the C3G software stack by looking at some of our installaton scripts [here](https://bitbucket.org/mugqic/genpipes/src/master/resources/modules/).
 These scripts allow us to install software, as well as create the associated module files for the desired versions.
 
+Save your work (script and result JSON) in an external repository and send us a link to it.
+Additional information that you think of can be either sent by email or included in the repo within a text file.
+
 
 ### Mentors
 [Edouard Henrion](mailto:edouard.henrion@computationalgenomics.ca)   
