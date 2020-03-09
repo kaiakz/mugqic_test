@@ -173,7 +173,7 @@ Here the `modulefiles/mugqic` folder only contains a handful of the C3G module f
 The `software` folder contains all the directory structures of the software specified in the `modulefiles/mugqic` module files (it does not contain the software itself as it is not necessary for the test).
 
 
-1- Parse the whole file structure of the [`data_test/SoftStackCatalog/modulefiles/mugqic/`](https://bitbucket.org/mugqic/gsoc_2020/src/SoftStackCatalog/data_test/SoftStackCatalog/modulefiles/mugqic/) folder and create a JSON file that would represent all the provided software and available versions.
+1- Parse the whole file structure of the [`data_test/SoftStackCatalog/modulefiles/mugqic/`](https://bitbucket.org/mugqic/gsoc_2020/src/master/SoftStackCatalog/data_test/SoftStackCatalog/modulefiles/mugqic/) folder and create a JSON file that would represent all the provided software and available versions.
 
 2- Identify the lacking information for a comprehensive and meaningful software catalog : besides the name and version of the software, what relevant information should be provided by the catalog (software description, website, etc...).
    Propose ways to find, gather and store this missing information.
