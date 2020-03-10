@@ -248,11 +248,21 @@ The libraries will be implemented in Python, and data should be collected and or
 
 ### Selection tests
 
-Coming soon
+Provided in the data_test/ directory is a XML file of posts made on the bioinformatics.stackexchange.com website (in 2020) : `bioinformatics_posts_se.xml`. With this dataset, you will build a simple python web application to serve this information with a few filtering options.
+
+As with the project itself, it is recommended to use Flask or Django.
+
+1- First step is to ingest this file in a sqlite database.
+
+2- Write an endpoint to return these posts, by default it should be in chronological order. By way of a query string in the URL, these posts may also be ordered by view count or score.
+
+3- Write an endpoint to search these posts. Again, by way of a query string, filter the posts based on the presence of the search term, either in the title or body of the post.
+
+Save your work in an external repository and send us a link to it.
 
 ### Mentors
 
-[Romain Gregoire](mailto:romain.gregoire@computationalgenomics.ca)   
+[Simon Chénard](mailto:simon.chenard2@mcgill.ca)
 [David Bujold](mailto:david.bujold@computationalgenomics.ca)   
 
 
