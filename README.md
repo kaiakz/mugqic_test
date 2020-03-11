@@ -262,7 +262,7 @@ Save your work in an external repository and send us a link to it.
 
 ### Mentors
 
-[Simon Chénard](mailto:simon.chenard2@mcgill.ca)  
+[Simon Chénard](mailto:simon.chenard@computationalgenomics.ca)  
 [David Bujold](mailto:david.bujold@computationalgenomics.ca)   
 
 
