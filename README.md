@@ -1,3 +1,4 @@
+JUST A TEST
 # Google Summer of Code 2020
 The development team of the [C3G](http://computationalgenomics.ca/) Montreal node is aiming to participate as an organization in Google Summer of Code 2020. We are offering to mentor students who wish to spend their summer working on interesting and user-friendly software pipelines for the analysis of Next-Generation Sequencing data. This page hosts information for prospective GSoC students and our project ideas. We are looking for 4 to 6 excellent students to collaborate on some of our research and development projects.
 
